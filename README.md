@@ -2,6 +2,78 @@
 
 A simple and clean monolith Laravel app boilerplate with a custom authentication system covered by tests. It uses the best parts of Laravel like Auth guards and the built-in password broker, but doesn't require digging through layers of default framework abstractions just to be overriden for simple extensions and adjustments in the way you need them to be done.
 
+## Installation
+
+### Step 1.
+
+Clone the repository to your dev environment and navigate to the project's directory in your CLI.
+
+Then, copy the dotenv config of the project from .env.example to .env.
+
+```bash
+cp .env.example .env
+```
+
+### Step 2.
+
+Install all dependencies via Composer:
+
+```bash
+composer install
+```
+
+### Step 3.
+
+Generate the unique app key with Artisan:
+
+```bash
+php artisan key:generate
+```
+
+### Step 4.
+
+If you would like to run yout tests with an in-memory SQLite database, then uncomment these two lines in phpunit.xml and skip to Step 6.
+```xml
+<server name="DB_CONNECTION" value="sqlite"/>
+<server name="DB_DATABASE" value=":memory:"/>
+```
+
+### Step 5.
+
+If you want to run your tests with a full-featured database, you will have to create one persistent database for your dev environment, and one for testing.
+
+Go ahead and create two separate databases with the same encoding and collation settings.
+
+Configure your dev .env file using the DB credentials of the database you've created for development. When you're done, make a copy of the .env file for testing:
+
+```bash
+cp .env .env.testing
+```
+
+In .env.testing, change the DB_DATABASE value to the name of the other database you've created for testing.
+
+```bash
+DB_DATABASE=name_of_your_testing_database_here
+```
+
+### Step 6.
+
+If you configured your project correctly, you can now run the full test suite with Pest and see them pass:
+
+```bash
+./vendor/bin/pest
+```
+
+### Step 7 _(optional)_.
+
+Install all the JavaScript dependencies if you need to:
+
+```bash
+npm install
+```
+
+For more information on working with Laravel, follow the [official Laravel documentation](https://laravel.com/docs/8.x).
+
 ## What's under the hood?
 
 - Laravel 8
