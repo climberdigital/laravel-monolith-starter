@@ -1,4 +1,4 @@
-## Laravel 8 Monolith Starter
+## Laravel 9 Monolith Starter
 
 A simple and clean monolith Laravel app boilerplate with a custom authentication system covered by tests. It uses the best parts of Laravel like Auth guards and the built-in password broker, but doesn't require digging through layers of default framework abstractions just to be overriden for simple extensions and adjustments in the way you need them to be done.
 
@@ -72,11 +72,11 @@ Install all the JavaScript dependencies if you need to:
 npm install
 ```
 
-For more information on working with Laravel, follow the [official Laravel documentation](https://laravel.com/docs/8.x).
+For more information on working with Laravel, follow the [official Laravel documentation](https://laravel.com/docs/9.x).
 
 ## What's under the hood?
 
-- Laravel 8
+- Laravel 9
 - Custom authentication logic for different user types
 - Tests covering all of the starter app
 - Domain-based Action classes
@@ -121,7 +121,7 @@ At the end of the day, it's just a minimal Laravel setup with the convenience of
 
 ## Requirements
 
-- PHP 8.0 and up.
+- PHP 8.0.2 and up.
 
 ## Can I use it?
 
